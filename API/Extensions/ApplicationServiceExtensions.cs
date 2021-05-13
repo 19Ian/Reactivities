@@ -1,12 +1,12 @@
+using Application.Activities;
+using Application.Core;
+using AutoMapper;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenAPI.Models;
+using Microsoft.OpenApi.Models;
 using Persistence;
-using Microsoft.EntityFrameworkCore;
-using MediatR;
-using AutoMapper;
-using Application.Core;
-using Application.Activities;
 
 namespace API.Extensions
 {
