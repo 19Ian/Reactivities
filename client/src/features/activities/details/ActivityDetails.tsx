@@ -14,7 +14,7 @@ export default function ActivityDetails({activity, cancelSelectActivity, openFor
 {
     return(
         <Card fluid>
-            <Image scr={'/assets/categoryImages/$activity.category.jpg'} />
+            <Image scr={`/assets/categoryImages/${activity}.category.jpg`} />
             <Card.Content>
                 <Card.Header>{activity.title}</Card.Header>
                 <Card.Meta>
