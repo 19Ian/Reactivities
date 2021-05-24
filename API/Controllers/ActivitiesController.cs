@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Application.Activities;
 using System.Threading;
 using Application.Core;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
+    [AllowAnonymous]
     public class ActivitiesController : BaseApiController
     {
 

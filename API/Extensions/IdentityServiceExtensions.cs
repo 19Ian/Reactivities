@@ -1,11 +1,12 @@
-using Persistence;
+using System.Text;
+using API.Services;
+using Domain;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Domain;
-using Microsoft.AspNetCore.Identity;
-using API.Services;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using Persistence;
 
 namespace API.Extensions
 {
@@ -26,7 +27,7 @@ namespace API.Extensions
                 {
                     opt.TokenValidationParameters = new TokenValidationParameters
                     {
-                        ValidationIssuerSigningKey = true,
+                        ValidateIssuerSigningKey = true,
                         IssuerSigningKey = key,
                         ValidateIssuer = false,
                         ValidateAudience = false,
